@@ -35,8 +35,51 @@
         }
 
         /* Main content hidden when popup is active */
-        #main-content {
+       #main-content {
             display: none;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        /* Order online section styles */
+        .order-online {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .order-online button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .order-online button:hover {
+            background-color: #e55b00;
         }
     </style>
 </head>
@@ -49,7 +92,7 @@
     </div>
 
        <!-- Main Content -->
-    <div id="main-content">
+   <div id="main-content">
         <!-- Header with shopping bag button -->
         <header>
             <a href="#">Home</a>
@@ -58,9 +101,10 @@
             </button>
         </header>
 
-        <!-- Order online section -->
+        <!-- Order Online Section -->
         <div class="order-online">
             <h1>Order Online</h1>
+            <p>Discover our amazing products and order online today!</p>
             <button onclick="alert('Shop Now clicked!')">Shop Now</button>
         </div>
 
@@ -78,7 +122,7 @@
             <p>&copy; 2024 E-Commerce Store. All rights reserved.</p>
         </footer>
     </div>
-    
+
     <script>
         function confirmAge() {
             // Hide the popup and show the main content
