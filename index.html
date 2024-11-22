@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Age verification popup styling */
+        #age-verification-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 9999;
+        }
+
+        #age-verification-popup button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Main content hidden when popup is active */
+        #main-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Age Verification Pop-Up -->
+    <div id="age-verification-popup">
+        <h1>Age Verification</h1>
+        <p>You must be 18 years or older to access this site.</p>
+        <button onclick="confirmAge()">I am 18 or older</button>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <header>
+            <h1>Welcome to Our E-Commerce Store</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Featured Products</h2>
+                <p>Explore our wide range of products!</p>
+            </section>
+            <section>
+                <h2>Categories</h2>
+                <p>Shop by category to find what you need.</p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 E-Commerce Store. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function confirmAge() {
+            // Hide the popup and show the main content
+            document.getElementById('age-verification-popup').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
