@@ -18,8 +18,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            color: white;
+            background-color: rgb(255, 0, 255);
+            color: fuschia;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -43,16 +43,27 @@
 <body>
     <!-- Age Verification Pop-Up -->
     <div id="age-verification-popup">
-        <h1>Age Verification</h1>
-        <p>You must be 18 years or older to access this site.</p>
-        <button onclick="confirmAge()">I am 18 or older</button>
+        <h1>ARE YOU 21 YEARS OF AGE OR OLDER?</h1>
+        <button onclick="confirmAge()">YES</button>
+        <button>NO</button>
     </div>
 
-    <!-- Main Content -->
+       <!-- Main Content -->
     <div id="main-content">
+        <!-- Header with shopping bag button -->
         <header>
-            <h1>Welcome to Our E-Commerce Store</h1>
+            <a href="#">Home</a>
+            <button onclick="alert('Shopping bag clicked!')" style="background: none; border: none; color: white; cursor: pointer; font-size: 18px;">
+                🛒 Shopping Bag
+            </button>
         </header>
+
+        <!-- Order online section -->
+        <div class="order-online">
+            <h1>Order Online</h1>
+            <button onclick="alert('Shop Now clicked!')">Shop Now</button>
+        </div>
+
         <main>
             <section>
                 <h2>Featured Products</h2>
@@ -67,7 +78,7 @@
             <p>&copy; 2024 E-Commerce Store. All rights reserved.</p>
         </footer>
     </div>
-
+    
     <script>
         function confirmAge() {
             // Hide the popup and show the main content
